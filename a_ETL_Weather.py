@@ -2,7 +2,6 @@ import os
 from pyspark import SparkConf
 from pyspark.sql import SparkSession
 import pyspark.sql.functions as F
-from b_retrieveSnowFlakecredentials import retriefSnowflakeSecret
 
 
 conf = SparkConf()
@@ -19,8 +18,8 @@ def readandtransformweatherdata(path):
                         'coordinates.latitude',
                         'coordinates.longitude',
                         'country',
-                        F.to_timestamp('date.local').alias('localtime'),
-                        F.to_timestamp('date.utc').alias('utctime'),
+                        F.to_timestamp('date.local').alias('local_time'),
+                        F.to_timestamp('date.utc').alias('utc_time'),
                         'entity',
                         'isAnalysis',
                         'location',
