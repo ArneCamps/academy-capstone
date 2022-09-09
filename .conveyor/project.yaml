@@ -1,0 +1,13 @@
+docker:
+    path: /workspace/academy-capstone
+id: 89cabcde-83b3-48c4-b560-b31029b6226d
+name: arne_project
+resources:
+    path: /workspace/academy-capstone/resources
+streaming:
+    filename: streaming.yaml
+template: ""
+version: "0.3"
+workflows:
+    path: /workspace/academy-capstone/dags
+    version: "2"
